@@ -1,0 +1,10 @@
+# select image
+FROM tic-tac-toe-package-cache:latest
+
+WORKDIR /tic-tac-toe
+
+# copy over your manifests
+COPY ./src ./src
+
+# this build step will cache your dependencies
+RUN cargo build --release
