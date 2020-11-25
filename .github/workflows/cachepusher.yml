@@ -18,6 +18,7 @@ jobs:
       - name: Check for cargo file changes
         run: |
           echo '${{steps.file_changes.outputs.files_modified}}' | grep 'Cargo'
+      - uses: actions/checkout@master
       - name: Push changes to cache branch
         uses: ad-m/github-push-action@master
         with:
