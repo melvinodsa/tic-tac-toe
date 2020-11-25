@@ -1,9 +1,9 @@
 # select image
-FROM rust:1.23
+FROM rust:1.46
 
 # copy your source tree
 COPY ./ ./
 
 # build for release
 RUN cargo build --release
-RUN run src/*
+RUN rm src/*
