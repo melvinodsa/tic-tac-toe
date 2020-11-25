@@ -17,4 +17,4 @@ jobs:
         uses: trilom/file-changes-action@v1.2.3
       - name: Check for cargo file changes
         run: |
-          echo '${{ steps.file_changes.outputs.files_modified}}'
+          echo '${{steps.file_changes.outputs.files_modified}}' | grep 'Cargo'
